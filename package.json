@@ -4,7 +4,12 @@
 	"description": "A Repository for doing hangouts messages",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"No test specified\" && exit 1"
+		"build": "tsc",
+		"test": "echo \"Error, no test specified\" && exit 1",
+		"format": "prettier --ignore-path .eslintignore --write \"src/**/*.ts\"",
+		"lint": "eslint . --cache --ext .ts",
+		"lint-fix": "tsc --noEmit && eslint \"*/**/*.ts\" --cache --quiet --fix",
+		"start": "ts-node example.ts"
 	},
 	"repository": {
 		"type": "git",
